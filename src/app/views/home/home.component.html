@@ -52,15 +52,15 @@
 </header>
 
 <main>    
-    <div class="card"></div>
-    <div class="card"></div>
-    <div class="card"></div>
-    <div class="card"></div>
-    <div class="card"></div>
-    <div class="card"></div>
-    <div class="card"></div>
-    <div class="card"></div>
+    <div class="card" *ngFor="let pokemon of pokemons">
+        <div class="container">
+            <img src="{{pokemon.imagem}}">
+            <p>{{pokemon.nome}}</p>
+        </div>
+    </div>
 </main>
+
+<img src="https://www.pokemon.com/static-assets/content-assets/cms2/img/pokedex/full/001.png" alt="">
 
 <p>home works!</p>
 
