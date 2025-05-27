@@ -55,13 +55,163 @@
     <div class="card" *ngFor="let pokemon of pokemons">
         <div class="container">
             <img src="{{pokemon.imagem}}">
+            
+            <div [ngSwitch]= "pokemon.elemento">
+                <div *ngSwitchCase="1" class="ftype-image">
+                    <img src="../../../assets/images/types/normal.svg" style="width: 70px;">
+                </div>
+
+                <div *ngSwitchCase="2" class="ftype-image">
+                    <img src="../../../assets/images/types/fire.svg" style="width: 70px;">
+                </div>
+
+                <div *ngSwitchCase="3" class="ftype-image">
+                    <img src="../../../assets/images/types/water.svg" style="width: 70px;">
+                </div>
+
+                <div *ngSwitchCase="4" class="ftype-image">
+                    <img src="../../../assets/images/types/grass.svg" style="width: 70px;">
+                </div>
+
+                <div *ngSwitchCase="5" class="ftype-image">
+                    <img src="../../../assets/images/types/flying.svg" style="width: 70px;">
+                </div>
+
+                <div *ngSwitchCase="6" class="ftype-image">
+                    <img src="../../../assets/images/types/figthing.svg" style="width: 70px;">
+                </div>
+
+                <div *ngSwitchCase="7" class="ftype-image">
+                    <img src="../../../assets/images/types/poison.svg" style="width: 70px;">
+                </div>
+
+                <div *ngSwitchCase="8" class="ftype-image">
+                    <img src="../../../assets/images/types/eletric.svg" style="width: 70px;">
+                </div>
+
+                <div *ngSwitchCase="9" class="ftype-image">
+                    <img src="../../../assets/images/types/ground.svg" style="width: 70px;">
+                </div>
+
+                <div *ngSwitchCase="10" class="ftype-image">
+                    <img src="../../../assets/images/types/rock.svg" style="width: 70px;">
+                </div>
+
+                <div *ngSwitchCase="11" class="ftype-image">
+                    <img src="../../../assets/images/types/psychic.svg" style="width: 70px;">
+                </div>
+
+                <div *ngSwitchCase="12" class="ftype-image">
+                    <img src="../../../assets/images/types/ice.svg" style="width: 70px;">
+                </div>
+
+                <div *ngSwitchCase="13" class="ftype-image">
+                    <img src="../../../assets/images/types/bug.svg" style="width: 70px;">
+                </div>
+
+                <div *ngSwitchCase="14" class="ftype-image">
+                    <img src="../../../assets/images/types/ghost.svg" style="width: 70px;">
+                </div>
+
+                <div *ngSwitchCase="15" class="ftype-image">
+                    <img src="../../../assets/images/types/steel.svg" style="width: 70px;">
+                </div>
+
+                <div *ngSwitchCase="16" class="ftype-image">
+                    <img src="../../../assets/images/types/dragon.svg" style="width: 70px;">
+                </div>
+
+                <div *ngSwitchCase="17" class="ftype-image">
+                    <img src="../../../assets/images/types/dark.svg" style="width: 70px;">
+                </div>
+
+                <div *ngSwitchCase="18" class="ftype-image">
+                    <img src="../../../assets/images/types/fairy.svg" style="width: 70px;">
+                </div>
+            </div>
+
+
+            <div [ngSwitch]="pokemon.segundoElemento">
+                <div *ngSwitchCase="1" class="ftype-image">
+                    <img src="../../../assets/images/types/normal.svg" style="width: 70px;">
+                </div>
+
+                <div *ngSwitchCase="2" class="stype-image">
+                    <img src="../../../assets/images/types/fire.svg" style="width: 70px;">
+                </div>
+
+                <div *ngSwitchCase="3" class="stype-image">
+                    <img src="../../../assets/images/types/water.svg" style="width: 70px;">
+                </div>
+
+                <div *ngSwitchCase="4" class="stype-image">
+                    <img src="../../../assets/images/types/grass.svg" style="width: 70px;">
+                </div>
+
+                <div *ngSwitchCase="5" class="stype-image">
+                    <img src="../../../assets/images/types/flying.svg" style="width: 70px;">
+                </div>
+
+                <div *ngSwitchCase="6" class="stype-image">
+                    <img src="../../../assets/images/types/figthing.svg" style="width: 70px;">
+                </div>
+
+                <div *ngSwitchCase="7" class="stype-image">
+                    <img src="../../../assets/images/types/poison.svg" style="width: 70px;">
+                </div>
+
+                <div *ngSwitchCase="8" class="stype-image">
+                    <img src="../../../assets/images/types/eletric.svg" style="width: 70px;">
+                </div>
+
+                <div *ngSwitchCase="9" class="stype-image">
+                    <img src="../../../assets/images/types/ground.svg" style="width: 70px;">
+                </div>
+
+                <div *ngSwitchCase="10" class="stype-image">
+                    <img src="../../../assets/images/types/rock.svg" style="width: 70px;">
+                </div>
+
+                <div *ngSwitchCase="11" class="stype-image">
+                    <img src="../../../assets/images/types/psychic.svg" style="width: 70px;">
+                </div>
+
+                <div *ngSwitchCase="12" class="stype-image">
+                    <img src="../../../assets/images/types/ice.svg" style="width: 70px;">
+                </div>
+
+                <div *ngSwitchCase="13" class="stype-image">
+                    <img src="../../../assets/images/types/bug.svg" style="width: 70px;">
+                </div>
+
+                <div *ngSwitchCase="14" class="stype-image">
+                    <img src="../../../assets/images/types/ghost.svg" style="width: 70px;">
+                </div>
+
+                <div *ngSwitchCase="15" class="stype-image">
+                    <img src="../../../assets/images/types/steel.svg" style="width: 70px;">
+                </div>
+
+                <div *ngSwitchCase="16" class="stype-image">
+                    <img src="../../../assets/images/types/dragon.svg" style="width: 70px;">
+                </div>
+
+                <div *ngSwitchCase="17" class="stype-image">
+                    <img src="../../../assets/images/types/dark.svg" style="width: 70px;">
+                </div>
+
+                <div *ngSwitchCase="18" class="stype-image">
+                    <img src="../../../assets/images/types/fairy.svg" style="width: 70px;">
+                </div>
+            </div>
+
+
             <p>{{pokemon.nome}}</p>
+            
         </div>
     </div>
+
 </main>
 
-<img src="https://www.pokemon.com/static-assets/content-assets/cms2/img/pokedex/full/001.png" alt="">
-
-<p>home works!</p>
 
 
