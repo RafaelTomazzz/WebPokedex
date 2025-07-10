@@ -51,6 +51,81 @@ main{
     gap: 20px;
 }
 
+section{
+    width: 1000px;
+    margin: 0px auto 0px auto;
+    display: flex;
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+section div{
+    width: 150px;
+    height: 50px;
+    background-color: rgb(236, 236, 236);
+    color:  rgb(129, 129, 129);
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    font-size: 18px;
+}
+
+input{
+    width: 300px;
+    height: 50px;
+    padding-left: 10px;
+    background-color: rgb(236, 236, 236);
+    border-radius: 5px;
+    border-style: none;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+input:focus {
+    border: none;
+    outline: none;
+}
+
+button{
+    width: 100px;
+    height: 50px;
+    background-color: green;
+    color: white;
+    border-radius: 5px;
+    border-style: none;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+button:hover{
+    background-color: rgb(1, 170, 1);
+    transition: 200ms;
+}
+
+button:active{
+    background-color: green;
+    transition: 200ms;
+}
+
+input[type="checkbox"]
+{
+    appearance: none;
+    width: 30px;
+    height: 30px;
+    background-color: none;
+    border-color: rgb(156, 156, 156);
+    border-style: solid;
+    border-width: 2px;
+}
+
+input[type="checkbox"]:checked
+{
+    background: rgb(156, 156, 156);
+    transition: 500ms;
+}
+
 .card{
     width: 200px;
     height: 200px;
@@ -96,4 +171,18 @@ main{
     position: absolute;
     top: 0px;
     right: 0px;
+}
+
+#clearButton{
+    background-color: #ff3f35;
+}
+
+#clearButton:hover{
+    background-color: #FA5C55;
+    transition: 200ms;
+}
+
+#clearButton:active{
+    background-color: #ff3f35;
+    transition: 200ms;
 }

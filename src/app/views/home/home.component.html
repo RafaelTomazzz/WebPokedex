@@ -51,7 +51,23 @@
     </div>
 </header>
 
-<main>    
+
+<form action="onsubmit" [formGroup]="getPokemonForm">
+        <section>
+            <input type="text" placeholder="Nome" id="SearchBar" formControlName="nome">
+
+            <div>
+                <label for="evolucoes">Evoluções</label>
+                <input type="checkbox" name="evolucoes" formControlName="evolucao">
+            </div>
+
+            <button type="submit" (click)= "OnSubmit()" >Send</button>
+            <button type="submit" id="clearButton" (click)="getAllPokemonEvolucao()">Clear</button>
+        </section>
+</form>
+
+
+<main>
     <div class="card" *ngFor="let pokemon of pokemons">
         <div class="container">
             <img src="{{pokemon.imagem}}">
