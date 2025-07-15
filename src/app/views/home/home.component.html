@@ -68,7 +68,7 @@
 
 
 <main>
-    <div class="card" *ngFor="let pokemon of pokemons">
+    <div class="card" *ngFor="let pokemon of pokemons" (click) = OpenHiddenContent()>
         <div class="container">
             <img src="{{pokemon.imagem}}">
             
@@ -221,13 +221,28 @@
                 </div>
             </div>
 
+            <p>{{pokemon.nome}}</p>    
+        </div>
 
-            <p>{{pokemon.nome}}</p>
-            
+    </div>
+
+    <div class="hiddenContent" #hiddenContent>
+        <div class="hiddenCard">
+            <header>
+                <div>
+                    <button (click)="CloseHiddenContent()"></button>
+                    <button></button>
+                </div>
+                <div></div>
+            </header>
+
+            <main></main>
         </div>
     </div>
 
 </main>
+
+
 
 
 

@@ -132,6 +132,7 @@ input[type="checkbox"]:checked
     background-image: url(../../../assets/images/card_background.svg);
     display: flex;
     justify-content: center;
+    cursor: pointer;
 }
 
 .card .container{
@@ -186,3 +187,48 @@ input[type="checkbox"]:checked
     background-color: #ff3f35;
     transition: 200ms;
 }
+
+.hiddenContent{
+    display: none;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    bottom: 0px;
+    right: 0px;
+    background-color: rgb(0, 0, 0, 0.5);
+}
+
+.hiddenCard{
+    width: 800px;
+    height: 500px;
+    background-color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+    border-radius: 10px;
+}
+
+.hiddenCard header{
+    width: 100%;
+    height: 200px;
+    background-color: #FA5C55;
+    border-radius: 10px 10px 0px 0px;
+    display: flex;
+    flex-direction: column;
+}
+
+.hiddenCard header div:first-child{
+    width: 100%;
+    height: 80px;
+    background-color: blue;
+    display: flex;
+    justify-content: space-between;
+}
+
+.hiddenCard header div:last-child{
+    width: 100%;
+    height: 100%;
+    background-color: gray;
+}
+

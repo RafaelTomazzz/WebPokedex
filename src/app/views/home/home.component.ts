@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, ElementRef, OnInit, ViewChild, Renderer2 } from '@angular/core';
 import { PokemonService } from '../../services/pokemon.service';
 import { Pokemon } from '../../models/pokemon';
 import { CommonModule } from '@angular/common';
@@ -16,7 +16,7 @@ export class HomeComponent implements OnInit{
   pokemons: Pokemon[]
   elemento: Elemento
 
-  constructor(public pokemonService: PokemonService) {}
+  constructor(public pokemonService: PokemonService, private renderer : Renderer2) {}
 
   ngOnInit(): void{
     this.getAllPokemonEvolucao()
@@ -69,5 +69,18 @@ export class HomeComponent implements OnInit{
     }
 
     console.log(nome)
+  }
+
+  @ViewChild("hiddenContent") hiddenContent : ElementRef
+
+
+  OpenHiddenContent(){
+    this.hiddenContent.nativeElement.style.display = "block"
+    this.renderer.addClass(document.body, "overflowHidden")
+  }
+
+  CloseHiddenContent(){
+    this.hiddenContent.nativeElement.style.display = "none"
+    this.renderer.removeClass(document.body, "overflowHidden")
   }
 }
