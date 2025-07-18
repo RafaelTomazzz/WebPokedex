@@ -33,6 +33,11 @@ export class PokemonService {
     return this.httpClient.get<Pokemon[]>(this.apiUrl + 'GetPokemonByName/' + nome);
   }
 
+  public getPokemonByNameCard(nome: string): Observable<Pokemon>
+  {
+    return this.httpClient.get<Pokemon>(this.apiUrl + 'GetPokemonByNameCard/' + nome);
+  }
+
   public getPokemonEvolucaoByName(nome: string): Observable<Pokemon[]>
   {
     return this.httpClient.get<Pokemon[]>(this.apiUrl + 'GetPokemonEvolucaoByName/' + nome);

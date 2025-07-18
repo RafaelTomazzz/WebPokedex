@@ -68,7 +68,7 @@
 
 
 <main>
-    <div class="card" *ngFor="let pokemon of pokemons" (click) = OpenHiddenContent()>
+    <div class="card" *ngFor="let pokemon of pokemons" (click) = OpenHiddenContent(pokemon.nome.toString())>
         <div class="container">
             <img src="{{pokemon.imagem}}">
             
@@ -230,10 +230,22 @@
         <div class="hiddenCard">
             <header>
                 <div>
-                    <button (click)="CloseHiddenContent()"></button>
-                    <button></button>
+                    <button (click)="CloseHiddenContent()" class="hiddenButton">
+                        <svg width="25" height="25" viewBox="0 0 193 336" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M185.751 7.38662C177.002 -1.36235 162.896 -1.36235 154.148 7.38662L5.77204 155.762C-1.19143 162.726 -1.19143 173.974 5.77204 180.938L154.148 329.313C162.896 338.062 177.002 338.062 185.751 329.313C194.5 320.564 194.5 306.459 185.751 297.71L56.4804 168.261L185.93 38.8115C194.5 30.2411 194.5 15.957 185.751 7.38662Z" fill="currentColor"/>
+                        </svg>
+                    </button>
+
+                    <button class="hiddenButton">
+                        <svg width="30" height="30" viewBox="0 0 27 27" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="13.5" cy="13.5" r="12.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M18 10.4457L12 17.4457L9 13.9457" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </button>
                 </div>
-                <div></div>
+                <div>
+                    <img src="{{pokemonSelecionado.imagem}}" alt="">
+                </div>
             </header>
 
             <main></main>

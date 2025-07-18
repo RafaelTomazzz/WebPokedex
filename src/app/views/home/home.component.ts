@@ -20,6 +20,10 @@ export class HomeComponent implements OnInit{
 
   ngOnInit(): void{
     this.getAllPokemonEvolucao()
+
+    this.pokemonService.getPokemonByNameCard("Bulbasaur").subscribe((pokemon: Pokemon) => {
+      this.pokemonSelecionado = pokemon
+    })
   }
 
   getAllPokemonEvolucao(){
@@ -72,11 +76,15 @@ export class HomeComponent implements OnInit{
   }
 
   @ViewChild("hiddenContent") hiddenContent : ElementRef
+  pokemonSelecionado : Pokemon
 
-
-  OpenHiddenContent(){
+  OpenHiddenContent(nome: string){
     this.hiddenContent.nativeElement.style.display = "block"
     this.renderer.addClass(document.body, "overflowHidden")
+
+    this.pokemonService.getPokemonByNameCard(nome).subscribe((pokemon: Pokemon) => {
+      this.pokemonSelecionado = pokemon
+    })
   }
 
   CloseHiddenContent(){
